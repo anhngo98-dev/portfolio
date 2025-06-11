@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional portfolio of a Business Analyst specializing in data analysis, process optimization, and stakeholder collaboration.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Professional portfolio of Li Zhengyangjie, a Business Analyst specializing in data analysis, process optimization, and stakeholder collaboration.">
   <title>Li Zhengyangjie - Business Analyst Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -14,125 +14,135 @@
     .hover-scale:hover { transform: scale(1.05); }
     .section-title { position: relative; display: inline-block; }
     .section-title::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 50%; height: 4px; background: #1e3a8a; }
+    #nav-menu { transition: max-height 0.3s ease-in-out; }
+    @media (max-width: 767px) {
+      #nav-menu { max-height: 0; overflow: hidden; }
+      #nav-menu.active { max-height: 300px; }
+    }
   </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-900">
   <!-- Navigation -->
-  <nav class="bg-white shadow-lg sticky top-0 z-10">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-900">Ngô Tuấn Anh</h1>
-      <ul class="flex space-x-8 text-lg font-medium">
-        <li><a href="#home" class="hover:text-blue-700 transition">Home</a></li>
-        <li><a href="#about" class="hover:text-blue-700 transition">About</a></li>
-        <li><a href="#experience" class="hover:text-blue-700 transition">Experience</a></li>
-        <li><a href="#portfolio" class="hover:text-blue-700 transition">Portfolio</a></li>
-        <li><a href="#contact" class="hover:text-blue-700 transition">Contact</a></li>
+  <nav class="bg-white shadow-lg sticky top-0 z-20">
+    <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl sm:text-2xl font-bold text-blue-900">Li Zhengyangjie</h1>
+      <button id="nav-toggle" class="md:hidden text-blue-900 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <ul id="nav-menu" class="flex flex-col md:flex-row md:space-x-8 text-base md:text-lg font-medium absolute md:static top-16 left-0 right-0 bg-white md:bg-transparent md:flex md:items-center transition-all duration-300">
+        <li class="py-2 px-4 md:p-0"><a href="#home" class="hover:text-blue-700 transition block">Home</a></li>
+        <li class="py-2 px-4 md:p-0"><a href="#about" class="hover:text-blue-700 transition block">About</a></li>
+        <li class="py-2 px-4 md:p-0"><a href="#experience" class="hover:text-blue-700 transition block">Experience</a></li>
+        <li class="py-2 px-4 md:p-0"><a href="#portfolio" class="hover:text-blue-700 transition block">Portfolio</a></li>
+        <li class="py-2 px-4 md:p-0"><a href="#contact" class="hover:text-blue-700 transition block">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="relative bg-gradient-to-r from-blue-900 to-blue-600 text-white py-32 overflow-hidden">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-5xl font-bold mb-4 animate-fade-in">Ngô Tuấn Anh</h2>
-      <p class="text-xl mb-8 font-light">Business Analyst | Driving Business Success Through Data-Driven Insights</p>
-      <a href="#contact" class="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition">Let's Collaborate</a>
+  <section id="home" class="relative bg-gradient-to-r from-blue-900 to-blue-600 text-white py-24 sm:py-32 overflow-hidden">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Li Zhengyangjie</h2>
+      <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 font-light">Business Analyst | Driving Business Success Through Data-Driven Insights</p>
+      <a href="#contact" class="bg-white text-blue-900 px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-100 transition">Let's Collaborate</a>
     </div>
-    <div class="absolute inset-0 bg-[url('https://via.placeholder.com/1920x1080?text=Abstract+Background')] opacity-10 bg-cover"></div>
+    <div class="absolute inset-0 bg-[url('https://via.placeholder.com/1200x600?text=Abstract+Background')] opacity-10 bg-cover bg-center"></div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-24 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12 section-title">About Me</h2>
-      <div class="flex flex-col md:flex-row items-center gap-12">
-        <img src="https://via.placeholder.com/300" alt="Li Zhengyangjie" class="w-72 h-72 rounded-full shadow-lg hover-scale">
+  <section id="about" class="py-16 sm:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <img src="https://via.placeholder.com/300" alt="Li Zhengyangjie" class="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full shadow-lg hover-scale object-cover">
         <div>
-          <p class="text-lg mb-4 leading-relaxed">As a Business Analyst with over [X years] of experience, I specialize in bridging business needs with technical solutions. My expertise lies in process optimization, stakeholder engagement, and leveraging tools like SQL, Excel, and Power BI to deliver actionable insights.</p>
-          <p class="text-lg leading-relaxed">Holding a [Your Degree, e.g., B.S. in Business Information Systems] from [Your University], I have collaborated with [notable clients/industries, e.g., fintech startups, retail]. My passion for data-driven decision-making fuels my commitment to delivering measurable results.</p>
+          <p class="text-sm sm:text-base md:text-lg mb-4 leading-relaxed">As a Business Analyst with over [X years] of experience, I specialize in bridging business needs with technical solutions. My expertise lies in process optimization, stakeholder engagement, and leveraging tools like SQL, Excel, and Power BI to deliver actionable insights.</p>
+          <p class="text-sm sm:text-base md:text-lg leading-relaxed">Holding a [Your Degree, e.g., B.S. in Business Information Systems] from [Your University], I have collaborated with [notable clients/industries, e.g., fintech startups, retail]. My passion for data-driven decision-making fuels my commitment to delivering measurable results.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="py-24 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12 section-title">Professional Experience</h2>
-      <div class="space-y-8 max-w-3xl mx-auto">
-        <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold text-blue-900">Business Analyst at [Company Name]</h3>
-          <p class="text-gray-600 italic">[Start Date] - [End Date]</p>
-          <p class="mt-2">Conducted requirements gathering and process mapping for [specific project, e.g., CRM implementation]. Utilized SQL and Power BI to analyze data, resulting in [achievement, e.g., 15% efficiency increase].</p>
+  <section id="experience" class="py-16 sm:py-24 bg-gray-100">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">Professional Experience</h2>
+      <div class="space-y-6 max-w-3xl mx-auto">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg hover-scale">
+          <h3 class="text-lg sm:text-xl font-semibold text-blue-900">Business Analyst at [Company Name]</h3>
+          <p class="text-gray-600 italic text-sm sm:text-base">[Start Date] - [End Date]</p>
+          <p class="mt-2 text-sm sm:text-base">Conducted requirements gathering and process mapping for [specific project, e.g., CRM implementation]. Utilized SQL and Power BI to analyze data, resulting in [achievement, e.g., 15% efficiency increase].</p>
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold text-blue-900">Junior Business Analyst at [Company Name]</h3>
-          <p class="text-gray-600 italic">[Start Date] - [End Date]</p>
-          <p class="mt-2">Supported Agile teams in [specific tasks, e.g., sprint planning, user story creation]. Delivered [achievement, e.g., streamlined workflows, reducing project delivery time by 10%].</p>
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg hover-scale">
+          <h3 class="text-lg sm:text-xl font-semibold text-blue-900">Junior Business Analyst at [Company Name]</h3>
+          <p class="text-gray-600 italic text-sm sm:text-base">[Start Date] - [End Date]</p>
+          <p class="mt-2 text-sm sm:text-base">Supported Agile teams in [specific tasks, e.g., sprint planning, user story creation]. Delivered [achievement, e.g., streamlined workflows, reducing project delivery time by 10%].</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-24 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12 section-title">Technical Skills</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-        <div class="bg-blue-50 p-6 rounded-lg shadow-md text-center hover-scale">
-          <h3 class="text-lg font-semibold text-blue-900 mb-2">Data Analysis</h3>
-          <p>SQL, Excel, Power BI, Tableau</p>
+  <section id="skills" class="py-16 sm:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">Technical Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+        <div class="bg-blue-50 p-4 sm:p-6 rounded-lg shadow-md text-center hover-scale">
+          <h3 class="text-base sm:text-lg font-semibold text-blue-900 mb-2">Data Analysis</h3>
+          <p class="text-sm sm:text-base">SQL, Excel, Power BI, Tableau</p>
         </div>
-        <div class="bg-blue-50 p-6 rounded-lg shadow-md text-center hover-scale">
-          <h3 class="text-lg font-semibold text-blue-900 mb-2">Process Modeling</h3>
-          <p>BPMN, UML, Visio, Lucidchart</p>
+        <div class="bg-blue-50 p-4 sm:p-6 rounded-lg shadow-md text-center hover-scale">
+          <h3 class="text-base sm:text-lg font-semibold text-blue-900 mb-2">Process Modeling</h3>
+          <p class="text-sm sm:text-base">BPMN, UML, Visio, Lucidchart</p>
         </div>
-        <div class="bg-blue-50 p-6 rounded-lg shadow-md text-center hover-scale">
-          <h3 class="text-lg font-semibold text-blue-900 mb-2">Project Management</h3>
-          <p>Agile, Scrum, JIRA, Trello</p>
+        <div class="bg-blue-50 p-4 sm:p-6 rounded-lg shadow-md text-center hover-scale">
+          <h3 class="text-base sm:text-lg font-semibold text-blue-900 mb-2">Project Management</h3>
+          <p class="text-sm sm:text-base">Agile, Scrum, JIRA, Trello</p>
         </div>
-        <div class="bg-blue-50 p-6 rounded-lg shadow-md text-center hover-scale">
-          <h3 class="text-lg font-semibold text-blue-900 mb-2">Soft Skills</h3>
-          <p>Stakeholder Engagement, Communication</p>
+        <div class="bg-blue-50 p-4 sm:p-6 rounded-lg shadow-md text-center hover-scale">
+          <h3 class="text-base sm:text-lg font-semibold text-blue-900 mb-2">Soft Skills</h3>
+          <p class="text-sm sm:text-base">Stakeholder Engagement, Communication</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="py-24 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12 section-title">Portfolio</h2>
+  <section id="portfolio" class="py-16 sm:py-24 bg-gray-100">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">Portfolio</h2>
       <!-- Filter Buttons -->
-      <div class="flex justify-center space-x-4 mb-8">
-        <button class="filter-btn px-6 py-2 rounded-full bg-blue-100 text-blue-900 hover:bg-blue-700 hover:text-white transition font-semibold" data-filter="all">All</button>
-        <button class="filter-btn px-6 py-2 rounded-full bg-blue-100 text-blue-900 hover:bg-blue-700 hover:text-white transition font-semibold" data-filter="data">Data Analysis</button>
-        <button class="filter-btn px-6 py-2 rounded-full bg-blue-100 text-blue-900 hover:bg-blue-700 hover:text-white transition font-semibold" data-filter="process">Process Optimization</button>
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
+        <button class="filter-btn px-4 sm:px-6 py-2 rounded-full bg-blue-100 text-blue-900 hover:bg-blue-700 hover:text-white transition text-sm sm:text-base font-semibold" data-filter="all">All</button>
+        <button class="filter-btn px-4 sm:px-6 py-2 rounded-full bg-blue-100 text-blue-900 hover:bg-blue-700 hover:text-white transition text-sm sm:text-base font-semibold" data-filter="data">Data Analysis</button>
+        <button class="filter-btn px-4 sm:px-6 py-2 rounded-full bg-blue-100 text-blue-900 hover:bg-blue-700 hover:text-white transition text-sm sm:text-base font-semibold" data-filter="process">Process Optimization</button>
       </div>
       <!-- Portfolio Items -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
         <div class="portfolio-item active bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-category="data">
-          <img src="https://via.placeholder.com/400x300" alt="CRM Data Dashboard" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">CRM Data Dashboard</h3>
-            <p class="text-gray-600 mb-4">Developed a Power BI dashboard for [client/industry, e.g., retail], enhancing data-driven decision-making.</p>
-            <a href="project1.html" class="text-blue-700 hover:underline font-medium">View Project</a>
+          <img src="https://via.placeholder.com/400x300" alt="CRM Data Dashboard" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4 sm:p-6">
+            <h3 class="text-base sm:text-xl font-semibold text-blue-900 mb-2">CRM Data Dashboard</h3>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">Developed a Power BI dashboard for [client/industry, e.g., retail], enhancing data-driven decision-making.</p>
+            <a href="project1.html" class="text-blue-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
           </div>
         </div>
         <div class="portfolio-item active bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-category="process">
-          <img src="https://via.placeholder.com/400x300" alt="Process Automation" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">Process Automation</h3>
-            <p class="text-gray-600 mb-4">Streamlined [process, e.g., supply chain workflows] using BPMN and automation tools.</p>
-            <a href="project2.html" class="text-blue-700 hover:underline font-medium">View Project</a>
+          <img src="https://via.placeholder.com/400x300" alt="Process Automation" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4 sm:p-6">
+            <h3 class="text-base sm:text-xl font-semibold text-blue-900 mb-2">Process Automation</h3>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">Streamlined [process, e.g., supply chain workflows] using BPMN and automation tools.</p>
+            <a href="project2.html" class="text-blue-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
           </div>
         </div>
         <div class="portfolio-item active bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-category="data">
-          <img src="https://via.placeholder.com/400x300" alt="Stakeholder Requirements Analysis" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-blue-900 mb-2">Stakeholder Requirements Analysis</h3>
-            <p class="text-gray-600 mb-4">Conducted requirements gathering for [project, e.g., ERP system], improving stakeholder alignment.</p>
-            <a href="project3.html" class="text-blue-700 hover:underline font-medium">View Project</a>
+          <img src="https://via.placeholder.com/400x300" alt="Stakeholder Requirements Analysis" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4 sm:p-6">
+            <h3 class="text-base sm:text-xl font-semibold text-blue-900 mb-2">Stakeholder Requirements Analysis</h3>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">Conducted requirements gathering for [project, e.g., ERP system], improving stakeholder alignment.</p>
+            <a href="project3.html" class="text-blue-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
           </div>
         </div>
       </div>
@@ -140,44 +150,52 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-24 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12 section-title">Get in Touch</h2>
+  <section id="contact" class="py-16 sm:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">Get in Touch</h2>
       <div class="max-w-md mx-auto">
-        <form action="#" class="space-y-6">
+        <form action="#" class="space-y-4 sm:space-y-6">
           <div>
-            <label for="name" class="block text-lg font-medium text-gray-700">Full Name</label>
-            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-700 focus:border-blue-700" placeholder="Your Name" required>
+            <label for="name" class="block text-sm sm:text-lg font-medium text-gray-700">Full Name</label>
+            <input type="text" id="name" class="w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:ring-blue-700 focus:border-blue-700 text-sm sm:text-base" placeholder="Your Name" required>
           </div>
           <div>
-            <label for="email" class="block text-lg font-medium text-gray-700">Email Address</label>
-            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-700 focus:border-blue-700" placeholder="your.email@example.com" required>
+            <label for="email" class="block text-sm sm:text-lg font-medium text-gray-700">Email Address</label>
+            <input type="email" id="email" class="w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:ring-blue-700 focus:border-blue-700 text-sm sm:text-base" placeholder="your.email@example.com" required>
           </div>
           <div>
-            <label for="message" class="block text-lg font-medium text-gray-700">Message</label>
-            <textarea id="message" class="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-700 focus:border-blue-700" rows="5" placeholder="Your message..." required></textarea>
+            <label for="message" class="block text-sm sm:text-lg font-medium text-gray-700">Message</label>
+            <textarea id="message" class="w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:ring-blue-700 focus:border-blue-700 text-sm sm:text-base" rows="4 sm:rows-5" placeholder="Your message..." required></textarea>
           </div>
-          <button type="button" onclick="alert('Form submission is not functional in this demo. Please integrate with a backend service.')" class="w-full bg-blue-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 transition">Send Message</button>
+          <button type="button" onclick="alert('Form submission is not functional in this demo. Please integrate with a backend service.')" class="w-full bg-blue-900 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-800 transition">Send Message</button>
         </form>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-900 text-white py-8">
-    <div class="container mx-auto px-6 text-center">
-      <p class="mb-4">© 2025 Li Zhengyangjie. All rights reserved.</p>
-      <div class="flex justify-center space-x-6">
-        <a href="#" class="hover:text-blue-300 transition">LinkedIn</a>
-        <a href="#" class="hover:text-blue-300 transition">GitHub</a>
-        <a href="#" class="hover:text-blue-300 transition">Twitter</a>
+  <footer class="bg-blue-900 text-white py-6 sm:py-8">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+      <p class="mb-4 text-sm sm:text-base">© 2025 Li Zhengyangjie. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 sm:space-x-6">
+        <a href="#" class="hover:text-blue-300 transition text-sm sm:text-base">LinkedIn</a>
+        <a href="#" class="hover:text-blue-300 transition text-sm sm:text-base">GitHub</a>
+        <a href="#" class="hover:text-blue-300 transition text-sm sm:text-base">Twitter</a>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript for Portfolio Filtering -->
+  <!-- JavaScript for Navigation and Portfolio Filtering -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Navigation Toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+
+      // Portfolio Filtering
       const filterButtons = document.querySelectorAll('.filter-btn');
       const portfolioItems = document.querySelectorAll('.portfolio-item');
 
