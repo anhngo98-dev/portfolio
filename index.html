@@ -1,43 +1,4 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -54,7 +15,7 @@
   <!-- Navigation -->
   <nav class="bg-white shadow-lg sticky top-0 z-10">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-gray-900">Luca Ngo</h1>
+      <h1 class="text-2xl font-bold text-gray-900">Your Name</h1>
       <ul class="flex space-x-8 text-lg">
         <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
         <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
@@ -68,8 +29,8 @@
   <!-- Hero Section -->
   <section id="home" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-5xl font-bold mb-4">Ngo Tuan Anh</h2>
-      <p class="text-xl mb-6">Business Analyst | Delivering Excellence in [Your Field]</p>
+      <h2 class="text-5xl font-bold mb-4">Your Name</h2>
+      <p class="text-xl mb-6">Professional [Your Profession] | Delivering Excellence in [Your Field]</p>
       <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition">Connect with Me</a>
     </div>
   </section>
@@ -149,7 +110,7 @@
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Project 1</h3>
             <p class="text-gray-600 mb-4">A web application built with [technologies, e.g., React, Node.js]. Key features include [feature description].</p>
-            <a href="#" class="text-blue-600 hover:underline">View Project</a>
+            <a href="project1.html" class="text-blue-600 hover:underline">View Project</a>
           </div>
         </div>
         <div class="portfolio-item active bg-white rounded-lg shadow-md overflow-hidden" data-category="design">
@@ -157,7 +118,7 @@
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Project 2</h3>
             <p class="text-gray-600 mb-4">A UI/UX design project for [client/industry]. Focused on [design focus, e.g., user-centered design].</p>
-            <a href="#" class="text-blue-600 hover:underline">View Project</a>
+            <a href="project2.html" class="text-blue-600 hover:underline">View Project</a>
           </div>
         </div>
         <div class="portfolio-item active bg-white rounded-lg shadow-md overflow-hidden" data-category="web">
@@ -165,7 +126,7 @@
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Project 3</h3>
             <p class="text-gray-600 mb-4">A full-stack application using [technologies, e.g., Python, Flask]. Delivered [key outcome].</p>
-            <a href="#" class="text-blue-600 hover:underline">View Project</a>
+            <a href="project3.html" class="text-blue-600 hover:underline">View Project</a>
           </div>
         </div>
       </div>
@@ -216,9 +177,7 @@
 
       filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-          // Remove active class from all buttons
           filterButtons.forEach(btn => btn.classList.remove('active'));
-          // Add active class to clicked button
           button.classList.add('active');
 
           const filter = button.getAttribute('data-filter');
