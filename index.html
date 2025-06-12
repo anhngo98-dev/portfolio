@@ -18,6 +18,59 @@
     @media (max-width: 767px) {
       #nav-menu { max-height: 0; overflow: hidden; }
       #nav-menu.active { max-height: 300px; }
+     .portfolio-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .portfolio-filter {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .portfolio-filter button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .portfolio-item {
+      flex: 0 0 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+    }
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .carousel-arrow.left {
+      left: 10px;
+    }
+    .carousel-arrow.right {
+      right: 10px;
+    }
+    @media (min-width: 768px) {
+      .portfolio-item {
+        flex: 0 0 33.33%;
+      }
+    }
     }
   </style>
 </head>
@@ -115,7 +168,7 @@
       <!-- Filter Buttons -->
       <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
         <button class="filter-btn px-4 sm:px-6 py-2 rounded-full bg-orange-100 text-orange-900 hover:bg-orange-700 hover:text-white transition text-sm sm:text-base font-semibold" data-filter="all">All</button>
-        <button class="filter-btn px-4 sm:px-6 py-2 rounded-full bg-orange-100 text-orange-900 hover:bg-orange-700 hover:text-white transition text-sm sm:text-base font-semibold" data-filter="data">Data Analysis</button>
+        <button class="filter-btn px-4 sm:px-6 py-2 rounded-full bg-orange-100 text-orange-900 hover:bg-orange-700 hover:text-white transition text-sm sm:text-base font-semibold" data-filter="data">Functional Analysis</button>
         <button class="filter-btn px-4 sm:px-6 py-2 rounded-full bg-orange-100 text-orange-900 hover:bg-orange-700 hover:text-white transition text-sm sm:text-base font-semibold" data-filter="process">Process Optimization</button>
       </div>
       <!-- Portfolio Items -->
@@ -144,8 +197,30 @@
             <a href="project3.html" class="text-orange-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
           </div>
         </div>
+        <!--
+        <div class="portfolio-item active bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-category="data">
+          <img src="img/NTU.png" alt="Stakeholder Requirements Analysis" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4 sm:p-6">
+            <h3 class="text-base sm:text-xl font-semibold text-orange-900 mb-2">Stakeholder Requirements Analysis</h3>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">Conducted requirements gathering for [project, e.g., ERP system], improving stakeholder alignment.</p>
+            <a href="project3.html" class="text-orange-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
+          </div>
       </div>
+      <div class="portfolio-item active bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-category="data">
+          <img src="img/NTU.png" alt="Stakeholder Requirements Analysis" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4 sm:p-6">
+            <h3 class="text-base sm:text-xl font-semibold text-orange-900 mb-2">Stakeholder Requirements Analysis</h3>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">Conducted requirements gathering for [project, e.g., ERP system], improving stakeholder alignment.</p>
+            <a href="project3.html" class="text-orange-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
+          </div>
     </div>
+       <div class="portfolio-item active bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-category="data">
+          <img src="img/NTU.png" alt="Stakeholder Requirements Analysis" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4 sm:p-6">
+            <h3 class="text-base sm:text-xl font-semibold text-orange-900 mb-2">Stakeholder Requirements Analysis</h3>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">Conducted requirements gathering for [project, e.g., ERP system], improving stakeholder alignment.</p>
+            <a href="project3.html" class="text-orange-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
+          </div>-->     
   </section>
 
   <!-- Contact Section -->
