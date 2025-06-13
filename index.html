@@ -15,63 +15,6 @@
     .section-title { position: relative; display: inline-block; }
     .section-title::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 50%; height: 4px; background: #1e3a8a; }
     #nav-menu { transition: max-height 0.3s ease-in-out; }
-    @media (max-width: 767px) {
-      #nav-menu { max-height: 0; overflow: hidden; }
-      #nav-menu.active { max-height: 300px; }
-     .portfolio-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .portfolio-filter {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .portfolio-filter button {
-      margin: 0 10px;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    .carousel {
-      position: relative;
-      overflow: hidden;
-    }
-    .carousel-inner {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-    .portfolio-item {
-      flex: 0 0 100%;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    .portfolio-item img {
-      width: 100%;
-      height: auto;
-    }
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 18px;
-    }
-    .carousel-arrow.left {
-      left: 10px;
-    }
-    .carousel-arrow.right {
-      right: 10px;
-    }
-    @media (min-width: 768px) {
-      .portfolio-item {
-        flex: 0 0 33.33%;
-      }
-    }
-    }
   </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-900">
@@ -95,7 +38,7 @@
   </nav>
 
   <!-- Hero Section -->
-<section id="home" class="relative bg-gradient-to-r from-orange-900 to-orange-600 text-white py-24 sm:py-32 overflow-hidden" <!--="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; background-opacity: 0.1;">
+<section id="home" class="relative bg-gradient-to-r from-orange-900 to-orange-600 text-white py-24 sm:py-32 overflow-hidden" background-image: url(https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80) background-size: cover; background-position: center; background-opacity: 0.1;>
     <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Ngô Tuấn Anh</h2>
       <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 font-light">Business Analyst | Driving Business Success Through Data-Driven Insights</p>
@@ -177,7 +120,7 @@
         <div class="portfolio-item active bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-category="data">
           <img src="img/logo NCSS.jfif" alt="CRM Data Dashboard" class="w-full h-40 sm:h-48 object-cover">
           <div class="p-4 sm:p-6">
-            <h3 class="text-base sm:text-xl font-semibold text-orange-900 mb-2">CRM Data Dashboard</h3>
+            <h3 class="text-base sm:text-xl font-semibold text-orange-900 mb-2">NCSS Project</h3>
             <p class="text-gray-600 text-sm sm:text-base mb-4">Developed a Power BI dashboard for [client/industry, e.g., retail], enhancing data-driven decision-making.</p>
             <a href="project1.html" class="text-orange-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
           </div>
@@ -185,7 +128,7 @@
         <div class="portfolio-item active bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-category="process">
           <img src="img/MOMA.jfif" alt="Process Automation" class="w-full h-40 sm:h-48 object-cover">
           <div class="p-4 sm:p-6">
-            <h3 class="text-base sm:text-xl font-semibold text-orange-900 mb-2">Process Automation</h3>
+            <h3 class="text-base sm:text-xl font-semibold text-orange-900 mb-2">MOM Project</h3>
             <p class="text-gray-600 text-sm sm:text-base mb-4">Streamlined [process, e.g., supply chain workflows] using BPMN and automation tools.</p>
             <a href="project2.html" class="text-orange-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
           </div>
@@ -193,7 +136,7 @@
         <div class="portfolio-item active bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-category="data">
           <img src="img/NTU.png" alt="Stakeholder Requirements Analysis" class="w-full h-40 sm:h-48 object-cover">
           <div class="p-4 sm:p-6">
-            <h3 class="text-base sm:text-xl font-semibold text-orange-900 mb-2">Stakeholder Requirements Analysis</h3>
+            <h3 class="text-base sm:text-xl font-semibold text-orange-900 mb-2">NTU Project</h3>
             <p class="text-gray-600 text-sm sm:text-base mb-4">Conducted requirements gathering for [project, e.g., ERP system], improving stakeholder alignment.</p>
             <a href="project3.html" class="text-orange-700 hover:underline text-sm sm:text-base font-medium">View Project</a>
           </div>
